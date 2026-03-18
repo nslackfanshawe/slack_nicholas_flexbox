@@ -1,0 +1,135 @@
+body {
+    font-family: "Bree Serif", serif, "Times New Roman";
+    background-color: #ffffff;
+    color: #111;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.main-header {
+    background-color: red;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / -1;
+    padding: 15px 0 5px 0;
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.main-nav {
+    grid-column: 1 / -1;
+    padding-bottom: 35px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.hero .grid-con {
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero-image {
+    order: 1;
+}
+
+.hero-content {
+    background-color: #ececec;
+    order: 2;
+}
+
+.hero-content-inner {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-content-inner h2 {
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.hero-content-inner p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    border-top: 4px solid red;
+    padding-top: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        grid-column: span 3;
+        justify-content: flex-start;
+        padding: 10px 0;
+    }
+
+    .logo img {
+        max-width: 140px;
+    }
+
+    .main-nav {
+        grid-column: span 9;
+        display: flex;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .hero-image {
+        order: 1;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-content-inner {
+        padding: 60px 40px;
+    }
+
+    .hero-content-inner h2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo img {
+        max-width: 160px;
+    }
+
+    .hero-content-inner {
+        padding: 80px 40px;
+    }
+}
